@@ -25,6 +25,8 @@ Plugin 'derekwyatt/vim-fswitch'
 
 Plugin 'majutsushi/tagbar'
 
+Plugin 'crucerucalin/qml.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -72,6 +74,15 @@ let g:airline_theme='onedark'
 " по умолчанию, окно с тэгами отображается справа, что не привычно.
 let g:tagbar_left = 1
 
+" переназначение
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" назначение новых сочетаний
+
 map <F6> :NERDTreeToggle<CR>
 map <C-f> :FZF<CR>
 map <C-w> :bn<CR>
@@ -82,6 +93,12 @@ nmap <F2> :FSHere<CR>
 
 " Tagbar
 nmap <F8> :Tagbar<CR>
+
+" HexView
+nmap <F9> :%!xxd<CR>
+
+" vsplit
+nmap <F10> :vsplit<CR>
 
 " YouComleteMe
 nmap <leader>d :YcmCompleter GoTo<CR>
